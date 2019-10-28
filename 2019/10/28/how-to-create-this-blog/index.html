@@ -5,17 +5,19 @@
   
 
   
-  <title>how-to-create-this-blog | Hexo</title>
+  <title>这个blog是如何建立的 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这个blog是如何建立的">
+  <meta name="description" content="使用hexo + github pages 建立此博客，下面我将详细描述在基于MacOS的系统环境下建站步骤。 安装Hexo是一个博客框架，基于nodejs运行。使用步骤如下：  安装nodejs 使用npm install -g hexo-cli命令安装hexo 如果在安装hexo过程中遇到问题，请查询官方文档  使用Hexo创建Hexo项目 创建一个空文件夹  打开终端并定位到该文件夹  执行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="how-to-create-this-blog">
+<meta property="og:title" content="这个blog是如何建立的">
 <meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;10&#x2F;28&#x2F;how-to-create-this-blog&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这个blog是如何建立的">
+<meta property="og:description" content="使用hexo + github pages 建立此博客，下面我将详细描述在基于MacOS的系统环境下建站步骤。 安装Hexo是一个博客框架，基于nodejs运行。使用步骤如下：  安装nodejs 使用npm install -g hexo-cli命令安装hexo 如果在安装hexo过程中遇到问题，请查询官方文档  使用Hexo创建Hexo项目 创建一个空文件夹  打开终端并定位到该文件夹  执行">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T02:11:17.053Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;10&#x2F;28&#x2F;images&#x2F;image-20191028105955271.png">
+<meta property="og:updated_time" content="2019-10-28T03:01:38.300Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;10&#x2F;28&#x2F;images&#x2F;image-20191028105955271.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -76,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      how-to-create-this-blog
+      这个blog是如何建立的
     </h1>
   
 
@@ -84,11 +86,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="这个blog是如何建立的"><a href="#这个blog是如何建立的" class="headerlink" title="这个blog是如何建立的"></a>这个blog是如何建立的</h1>
+        <p>使用hexo + github pages 建立此博客，下面我将详细描述在基于MacOS的系统环境下建站步骤。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></h2><p>是一个博客框架，基于nodejs运行。使用步骤如下：</p>
+<ol>
+<li><a href="https://www.npmjs.cn/getting-started/installing-node" target="_blank" rel="noopener">安装nodejs</a></li>
+<li>使用<code>npm install -g hexo-cli</code>命令安装hexo</li>
+<li>如果在安装hexo过程中遇到问题，请查询<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a></li>
+</ol>
+<h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><h3 id="创建Hexo项目"><a href="#创建Hexo项目" class="headerlink" title="创建Hexo项目"></a>创建Hexo项目</h3><ol>
+<li><p>创建一个空文件夹</p>
+</li>
+<li><p>打开终端并定位到该文件夹</p>
+</li>
+<li><p>执行下面命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd your_folder_directory</span><br><span class="line">hexo init ./</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>此时的博客已经建立好</p>
+</li>
+<li><p>更多细节内容可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a></p>
+</li>
+</ol>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><h4 id="创建一篇文章"><a href="#创建一篇文章" class="headerlink" title="创建一篇文章"></a>创建一篇文章</h4><p>在项目路径下打开终端，并键入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new "hello"</span><br></pre></td></tr></table></figure>
+
+<p>这样就会在项目目录<code>./source/_post</code>中创建相应的md文件，编辑这个文件即可进行写作。</p>
+<h4 id="使用Typora快速保存，插入本地图片"><a href="#使用Typora快速保存，插入本地图片" class="headerlink" title="使用Typora快速保存，插入本地图片"></a>使用Typora快速保存，插入本地图片</h4><p>如果使用Typora进行写作，可以进行如下设置，以快速保存图片到项目本地。</p>
+<p>在<code>Typora - 偏好设置 - 图像</code>中，设置如下图</p>
+<img src="../images/image-20191028105955271.png" alt="image-20191028105955271" style="zoom:50%;" />
+
+<h4 id="静态网站生成"><a href="#静态网站生成" class="headerlink" title="静态网站生成"></a>静态网站生成</h4><p>使用命令<code>hexo g</code>可以生成静态网站，生成后会存放在<code>public</code>文件夹下面。</p>
+<p>可以使用<code>hexo s</code>开启本地服务器，进行本地测试。</p>
+<h2 id="部署到GitHub-Pages"><a href="#部署到GitHub-Pages" class="headerlink" title="部署到GitHub Pages"></a>部署到GitHub Pages</h2><p>可以根据<a href="https://pages.github.com/" target="_blank" rel="noopener">官方文档</a>，进行部署。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://readpan.github.io/2019/10/28/how-to-create-this-blog/" data-id="ck29sd5or0002zh81er7ven1p" class="article-share-link">Share</a>
+      <a data-url="https://readpan.github.io/2019/10/28/how-to-create-this-blog/" data-id="ck29uzofz0001bi81ehyh7b1r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +175,7 @@
       <ul>
         
           <li>
-            <a href="/2019/10/28/how-to-create-this-blog/">how-to-create-this-blog</a>
+            <a href="/2019/10/28/how-to-create-this-blog/">这个blog是如何建立的</a>
           </li>
         
           <li>

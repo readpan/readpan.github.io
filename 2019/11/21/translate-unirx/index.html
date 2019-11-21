@@ -17,15 +17,19 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2019/10 | Hexo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Read Pan Blog">
-<meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;archives&#x2F;2019&#x2F;10&#x2F;index.html">
+  <title>UniRx - Unity响应式扩展 | Hexo</title>
+  <meta name="description" content="UniRx - Unity响应式扩展写在前面本文是翻译UniRx在GitHub中的README。 翻译的目的是为了让自己能够在看原文档的时候，真正理解其意。所以，有些地方使用Google的机器翻译。 UniRx是什么UniRx（Unity的响应式扩展）是.NET响应式扩展的重新实现。官方的响应式扩展很好，但是在Unity中无法工作，并且对iOS IL2CPP兼容性存在问题。本库修复了这些问题并且添">
+<meta name="keywords" content="UniRx,Unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UniRx - Unity响应式扩展">
+<meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;11&#x2F;21&#x2F;translate-unirx&#x2F;index.html">
 <meta property="og:site_name" content="Read Pan Blog">
+<meta property="og:description" content="UniRx - Unity响应式扩展写在前面本文是翻译UniRx在GitHub中的README。 翻译的目的是为了让自己能够在看原文档的时候，真正理解其意。所以，有些地方使用Google的机器翻译。 UniRx是什么UniRx（Unity的响应式扩展）是.NET响应式扩展的重新实现。官方的响应式扩展很好，但是在Unity中无法工作，并且对iOS IL2CPP兼容性存在问题。本库修复了这些问题并且添">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-21T08:15:05.349Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://readpan.github.io/archives/2019/10/index.html">
+  <link rel="canonical" href="https://readpan.github.io/2019/11/21/translate-unirx/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Read Pan Blog" type="application/atom+xml">
   
@@ -313,48 +317,194 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2019/10</h1>
-	      <p class="text-muted">共 1 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-translate-unirx" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      UniRx - Unity响应式扩展
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2019/11/21/translate-unirx/" class="article-date">
+	  <time datetime="2019-11-21T08:11:21.000Z" itemprop="datePublished">2019-11-21</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/UniRx/" rel="tag">UniRx</a>, <a class="article-tag-link" href="/tags/Unity/" rel="tag">Unity</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/21/translate-unirx/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="UniRx-Unity响应式扩展"><a href="#UniRx-Unity响应式扩展" class="headerlink" title="UniRx - Unity响应式扩展"></a>UniRx - Unity响应式扩展</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文是翻译UniRx在GitHub中的<a href="https://github.com/neuecc/UniRx" target="_blank" rel="noopener">README</a>。</p>
+<p>翻译的目的是为了让自己能够在看原文档的时候，真正理解其意。所以，有些地方使用Google的机器翻译。</p>
+<h2 id="UniRx是什么"><a href="#UniRx是什么" class="headerlink" title="UniRx是什么"></a>UniRx是什么</h2><p>UniRx（Unity的响应式扩展）是.NET响应式扩展的重新实现。官方的响应式扩展很好，但是在Unity中无法工作，并且对iOS IL2CPP兼容性存在问题。本库修复了这些问题并且添加了一些特殊的Unity工具。支持平台PC / Mac / Android / iOS / WebGL / WindowsStore / etc和库。</p>
+<h2 id="为什么Rx？"><a href="#为什么Rx？" class="headerlink" title="为什么Rx？"></a>为什么Rx？</h2><p>通常来讲，Unity中的网络操作需要使用<code>WWW</code>和<code>Coroutine</code>。出于以下（和其他）原因，对于异步操作，使用Coroutine并不是一种好习惯：</p>
+<ol>
+<li>协程不能返回任何值，因为它的返回类型必须是IEnumerator。</li>
+<li>协程不能处理异常，因为yield return语句不能用try-catch结构包围。</li>
+</ol>
+<p>这种缺乏可组合性的操作导致操作紧密耦合，这通常会导致庞大的整体式IEnumerator。</p>
+<p>Rx可以解决这种“异步坑”。 Rx是一个库，用于使用可观察的集合和LINQ样式的查询运算符来组成基于异步和基于事件的程序。</p>
+<p>游戏循环（每次Update，OnCollisionEnter等），传感器数据（Kinect，Leap Motion，VR Input等）都是事件类型。 Rx将事件表示为反应性序列，这些事件既易于组合，又使用LINQ查询运算符支持基于时间的操作。</p>
+<p>Unity通常是单线程的，但是UniRx促进连接，取消，访问GameObjects等的多线程。</p>
+<p>UniRx帮助使用uGUI进行UI编程。 所有UI事件（单击，更改值等）都可以转换为UniRx事件流。 </p>
+<p>Unity从2017年开始通过C＃升级支持async / await，UniRx系列产品提供与Unity的更轻便，更强大的async / await集成。 请参见<a href="https://github.com/Cysharp/UniTask" target="_blank" rel="noopener">Cysharp / UniTask</a>。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>很棒的Rx相关文章：<a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank" rel="noopener">The introduction to Reactive Programming you’ve been missing</a>.</p>
+<p>下面的代码实现了双击检测：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clickStream = Observable.EveryUpdate()</span><br><span class="line">    .Where(_ =&gt; Input.GetMouseButtonDown(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">clickStream.Buffer(clickStream.Throttle(TimeSpan.FromMilliseconds(<span class="number">250</span>)))</span><br><span class="line">    .Where(xs =&gt; xs.Count &gt;= <span class="number">2</span>)</span><br><span class="line">    .Subscribe(xs =&gt; Debug.Log(<span class="string">"DoubleClick Detected! Count:"</span> + xs.Count));</span><br></pre></td></tr></table></figure>
+
+<p>这个例子展示了以下特性（仅在5行代码中！）：</p>
+<ul>
+<li>以游戏循环（Update）作为一个事件流</li>
+<li>可组合的事件流</li>
+<li>自我合并流</li>
+<li>易于处理基于时间的操作</li>
+</ul>
+<h2 id="网络操作"><a href="#网络操作" class="headerlink" title="网络操作"></a>网络操作</h2><hr>
+<p>未完待续…</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://readpan.github.io/2019/11/21/translate-unirx/" title="UniRx - Unity响应式扩展" target="_blank" rel="external">https://readpan.github.io/2019/11/21/translate-unirx/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/readpan" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/readpan" target="_blank"><span class="text-dark">Read Pan</span><small class="ml-1x">Programmer</small></a></h3>
+        <div>程序员</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2019" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2019
-            </a>
-            <!-- <a href="/archives/2019" class="archive-year">2019</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2019/11/08/mind-job-simulator/" title="求职模拟器"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2019" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2019">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2019/10/28/how-to-create-this-blog/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-10-28T02:09:25.000Z" itemprop="datePublished">2019-10-28</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 这个blog是如何建立的
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-  
-    </div></div></div></section>
-  
 
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -404,6 +554,29 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+   
+
+
+
+
+   
+    
+    <script defer>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://readpan.github.io/2019/11/21/translate-unirx/';
+        
+        this.page.identifier = 'translate-unirx';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'readpan-github-io' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 
 

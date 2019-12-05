@@ -17,19 +17,19 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>求职模拟器 | Read Pan Blog</title>
-  <meta name="keywords" content="mind">
+  <title>使用npm发布个人unity package到package mangaer | Read Pan Blog</title>
+  <meta name="description" content="简介本文介绍如何使用npm方式，将插件发布到unity package manager中。 npm安装环境在本地安装npm环境，这一步轻自行解决。 注册在官网注册账号 创建npm本地创建空文件夹，创建文件package.json 123456789101112&amp;#123;  &amp;quot;name&amp;quot;: &amp;quot;com.aaa.bbb&amp;quot;,  &amp;quot;displayName&amp;">
+<meta name="keywords" content="unity,unity package manager,npm,custom unity package">
 <meta property="og:type" content="article">
-<meta property="og:title" content="求职模拟器">
-<meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;11&#x2F;08&#x2F;mind-job-simulator&#x2F;index.html">
+<meta property="og:title" content="使用npm发布个人unity package到package mangaer">
+<meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;12&#x2F;05&#x2F;custom-package-manager-npm&#x2F;index.html">
 <meta property="og:site_name" content="Read Pan Blog">
+<meta property="og:description" content="简介本文介绍如何使用npm方式，将插件发布到unity package manager中。 npm安装环境在本地安装npm环境，这一步轻自行解决。 注册在官网注册账号 创建npm本地创建空文件夹，创建文件package.json 123456789101112&amp;#123;  &amp;quot;name&amp;quot;: &amp;quot;com.aaa.bbb&amp;quot;,  &amp;quot;displayName&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;11&#x2F;08&#x2F;mind-job-simulator&#x2F;%E6%B1%82%E8%81%8C%E6%A8%A1%E6%8B%9F%E5%99%A8.png">
-<meta property="og:updated_time" content="2019-11-08T08:29:57.381Z">
+<meta property="og:updated_time" content="2019-12-05T07:05:14.671Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2019&#x2F;11&#x2F;08&#x2F;mind-job-simulator&#x2F;%E6%B1%82%E8%81%8C%E6%A8%A1%E6%8B%9F%E5%99%A8.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://readpan.github.io/2019/11/08/mind-job-simulator/index.html">
+  <link rel="canonical" href="https://readpan.github.io/2019/12/05/custom-package-manager-npm/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Read Pan Blog" type="application/atom+xml">
   
@@ -333,14 +333,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-mind-job-simulator" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-custom-package-manager-npm" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      求职模拟器
+      使用npm发布个人unity package到package mangaer
     </h1>
   
 
@@ -348,28 +348,53 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/11/08/mind-job-simulator/" class="article-date">
-	  <time datetime="2019-11-08T08:24:08.000Z" itemprop="datePublished">2019-11-08</time>
+	<a href="/2019/12/05/custom-package-manager-npm/" class="article-date">
+	  <time datetime="2019-12-05T02:23:59.000Z" itemprop="datePublished">2019-12-05</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/mind/" rel="tag">mind</a>
+	<a class="article-tag-link" href="/tags/custom-unity-package/" rel="tag">custom unity package</a>, <a class="article-tag-link" href="/tags/npm/" rel="tag">npm</a>, <a class="article-tag-link" href="/tags/unity/" rel="tag">unity</a>, <a class="article-tag-link" href="/tags/unity-package-manager/" rel="tag">unity package manager</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/08/mind-job-simulator/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/12/05/custom-package-manager-npm/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <img src="/2019/11/08/mind-job-simulator/%E6%B1%82%E8%81%8C%E6%A8%A1%E6%8B%9F%E5%99%A8.png" class="">
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文介绍如何使用npm方式，将插件发布到unity package manager中。</p>
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><p>在本地安装npm环境，这一步轻自行解决。</p>
+<h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>在<a href="https://www.npmjs.com/" target="_blank" rel="noopener">官网</a>注册账号</p>
+<h3 id="创建npm"><a href="#创建npm" class="headerlink" title="创建npm"></a>创建npm</h3><p>本地创建空文件夹，创建文件package.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;com.aaa.bbb&quot;,</span><br><span class="line">  &quot;displayName&quot;: &quot;bbb&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;unity&quot;: &quot;2018.4&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;First Package&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;author&quot;: &quot;xxx&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>创建README.md，此文件是介绍当前package的文件。</p>
+<h3 id="发布npm"><a href="#发布npm" class="headerlink" title="发布npm"></a>发布npm</h3><ol>
+<li>打开终端（windows 是 cmd），定位到当前文件夹。</li>
+<li>键入<code>npm login</code> 回车</li>
+<li>使用注册的用户名和密码登录</li>
+<li>成功后使用npm publish发布</li>
+</ol>
+<h2 id="使用package"><a href="#使用package" class="headerlink" title="使用package"></a>使用package</h2><h3 id="配置manifest-json"><a href="#配置manifest-json" class="headerlink" title="配置manifest.json"></a>配置manifest.json</h3><ol>
+<li><p>新建unity项目（也可以使用已有项目）</p>
+</li>
+<li><p>在项目目录中找到Packages目录</p>
+</li>
+<li><p>编辑目录下的manifest.json</p>
+</li>
+<li><p>配置刚发布到npm的package</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scopedRegistries&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;name&quot;: &quot;firstpackage&quot;,</span><br><span class="line">      &quot;url&quot;: &quot;https://registry.npmjs.org&quot;,</span><br><span class="line">      &quot;scopes&quot;: [</span><br><span class="line">        &quot;com.aaa&quot;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;com.aaa.bbb&quot;: &quot;1.0.0&quot;,</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开unity，会在package manger中看到自己发布的package</p>
+</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>有任何问题欢迎留言讨论</p>
 
       
     </div>
@@ -379,7 +404,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://readpan.github.io/2019/11/08/mind-job-simulator/" title="求职模拟器" target="_blank" rel="external">https://readpan.github.io/2019/11/08/mind-job-simulator/</a>
+      <a href="https://readpan.github.io/2019/12/05/custom-package-manager-npm/" title="使用npm发布个人unity package到package mangaer" target="_blank" rel="external">https://readpan.github.io/2019/12/05/custom-package-manager-npm/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -427,13 +452,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2019/11/21/translate-unirx/" title="UniRx - Unity响应式扩展"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2019/11/07/soft-staruml/" title="StarUML3.1 For Mac Crack"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/11/28/creating-custom-packages/" title="创建自定义组件并结合package manager管理"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -560,9 +581,9 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     <script defer>
     var disqus_config = function () {
         
-            this.page.url = 'https://readpan.github.io/2019/11/08/mind-job-simulator/';
+            this.page.url = 'https://readpan.github.io/2019/12/05/custom-package-manager-npm/';
         
-        this.page.identifier = 'mind-job-simulator';
+        this.page.identifier = 'custom-package-manager-npm';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

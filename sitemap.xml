@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://readpan.github.io/2019/11/28/creating-custom-packages/</loc>
+    
+    <lastmod>2019-12-05T07:06:11.318Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://readpan.github.io/2019/12/05/custom-package-manager-npm/</loc>
+    
+    <lastmod>2019-12-05T07:05:14.671Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://readpan.github.io/2019/11/21/translate-unirx/</loc>
     
     <lastmod>2019-11-21T08:15:05.349Z</lastmod>

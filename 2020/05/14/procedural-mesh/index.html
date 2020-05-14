@@ -17,15 +17,19 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签: Crack | Read Pan Blog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Read Pan Blog">
-<meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;tags&#x2F;Crack&#x2F;index.html">
+  <title>Procedural Mesh | Read Pan Blog</title>
+  <meta name="description" content="模型基本概念顶点 三角面 使用代码创建模型12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849using UnityEngine;public class ProceduralMesh : MonoBehaviour&amp;#123;    private Vector3[] _">
+<meta name="keywords" content="unity,mesh,tutorial">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Procedural Mesh">
+<meta property="og:url" content="https:&#x2F;&#x2F;readpan.github.io&#x2F;2020&#x2F;05&#x2F;14&#x2F;procedural-mesh&#x2F;index.html">
 <meta property="og:site_name" content="Read Pan Blog">
+<meta property="og:description" content="模型基本概念顶点 三角面 使用代码创建模型12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849using UnityEngine;public class ProceduralMesh : MonoBehaviour&amp;#123;    private Vector3[] _">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-14T00:25:35.107Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://readpan.github.io/tags/Crack/index.html">
+  <link rel="canonical" href="https://readpan.github.io/2020/05/14/procedural-mesh/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Read Pan Blog" type="application/atom+xml">
   
@@ -326,72 +330,174 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签: Crack</h1>
-      <p class="text-muted hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/unity/">unity</a></li>
-          
-          <li><a href="/tags/unity-package-manager/">unity package manager</a></li>
-          
-          <li><a href="/tags/npm/">npm</a></li>
-          
-          <li><a href="/tags/custom-unity-package/">custom unity package</a></li>
-          
-          <li><a href="/tags/package-manager/">package manager</a></li>
-          
-          <li><a href="/tags/mind/">mind</a></li>
-          
-          <li><a href="/tags/Crack/">Crack</a></li>
-          
-          <li><a href="/tags/mesh/">mesh</a></li>
-          
-          <li><a href="/tags/tutorial/">tutorial</a></li>
-          
-          <li><a href="/tags/UniRx/">UniRx</a></li>
-          
-          <li><a href="/tags/Unity/">Unity</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
-        
-<div class="col-md-6">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-procedural-mesh" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2019-11-07T01:07:06.000Z" itemprop="datePublished">2019-11-07</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2019/11/07/soft-staruml/">StarUML3.1 For Mac Crack</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/Crack/" class="label label-default mb">Crack</a>
-     
-     
-   </div>
-   
-</article>
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Procedural Mesh
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/05/14/procedural-mesh/" class="article-date">
+	  <time datetime="2020-05-14T00:24:01.000Z" itemprop="datePublished">2020-05-14</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/mesh/" rel="tag">mesh</a>, <a class="article-tag-link" href="/tags/tutorial/" rel="tag">tutorial</a>, <a class="article-tag-link" href="/tags/unity/" rel="tag">unity</a>
+  </span>
 
 
-</div>
+        
 
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/14/procedural-mesh/#comments" class="article-comment-link">评论</a></span>
+        
       </div>
     </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="模型基本概念"><a href="#模型基本概念" class="headerlink" title="模型基本概念"></a>模型基本概念</h2><p>顶点</p>
+<p>三角面</p>
+<h2 id="使用代码创建模型"><a href="#使用代码创建模型" class="headerlink" title="使用代码创建模型"></a>使用代码创建模型</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ProceduralMesh</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> Vector3[] _verticals;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] _triangles;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Mesh _mesh;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Start is called before the first frame update</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Awake</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//获取相应组件</span></span><br><span class="line">        <span class="keyword">var</span> meshFilter = gameObject.GetComponent&lt;MeshFilter&gt;();</span><br><span class="line">        <span class="keyword">var</span> meshRenderer = gameObject.GetComponent&lt;MeshRenderer&gt;();</span><br><span class="line">        _mesh = meshFilter.mesh;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        MakeMeshData();</span><br><span class="line">        CreateMesh();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">MakeMeshData</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//顶点数据</span></span><br><span class="line">        _verticals = <span class="keyword">new</span>[]</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>),</span><br><span class="line">            <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>),</span><br><span class="line">            <span class="keyword">new</span> Vector3(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>),</span><br><span class="line">            <span class="keyword">new</span> Vector3(<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>),</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//三角面信息</span></span><br><span class="line">        _triangles = <span class="keyword">new</span>[] &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建Mesh</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">CreateMesh</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        _mesh.Clear();</span><br><span class="line">        _mesh.vertices = _verticals;</span><br><span class="line">        _mesh.triangles = _triangles;</span><br><span class="line">        _mesh.RecalculateNormals();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="顶点共用"><a href="#顶点共用" class="headerlink" title="顶点共用"></a>顶点共用</h2><p>三角面可以共用顶点，但需要注意的是，使用共用顶点组成相邻面时，如果相邻面不在同一平面上，那么会平滑过渡。如果不公用点，则不会由此效果。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://readpan.github.io/2020/05/14/procedural-mesh/" title="Procedural Mesh" target="_blank" rel="external">https://readpan.github.io/2020/05/14/procedural-mesh/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/readpan" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/readpan" target="_blank"><span class="text-dark">Read Pan</span><small class="ml-1x">Programmer</small></a></h3>
+        <div>程序员</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2019/12/05/custom-package-manager-npm/" title="使用npm发布个人unity package到package mangaer"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -441,6 +547,29 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+   
+
+
+
+
+   
+    
+    <script defer>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://readpan.github.io/2020/05/14/procedural-mesh/';
+        
+        this.page.identifier = 'procedural-mesh';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'readpan-github-io' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 
 
